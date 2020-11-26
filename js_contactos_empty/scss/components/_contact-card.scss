@@ -1,0 +1,64 @@
+
+.contact-card{
+    display:none;
+    position: relative;
+    margin: 20px 0px 10px 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 2px 2px 5px 0px #d6cfd6;
+    max-width:250px;
+    min-width:250px;
+    &:hover{
+        background:rgb(241, 241, 209);
+    }
+    .title-card{/*>:first-child{*/
+        background: #000;
+        height:24px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;       
+        padding-left:0px; 
+        >div>h1{
+            color:#fff;
+            padding:2px 10px 0px 10px;
+            font-size:.9em;
+            width:90%;
+        }
+    }   
+    .body-card{
+        padding-top:10px;
+        .menu-card {
+            font-size: .6em;
+            font-family: 'Courier New', Courier, monospace;
+        }        
+        .data-card{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: .6em;
+            background: #eee;
+            padding-top:10px;
+            margin-top:10px;
+            div{
+                font-weight:900;
+                span{
+                    font-weight:300;
+                }
+            }
+        }        
+    }
+    .avatar{
+        max-height: 50px;
+        ~ div{ /*el primer hijo div - globo para la edad*/
+            position: absolute;
+            top:30px;
+            left:50px;
+            background: green;
+            width:20px;
+            height:20px;
+            border-radius: 10px;
+            color:#fff;
+            font-size:.6em;
+            text-align:center;
+            border:2px solid #fff
+        }    
+    }
+}

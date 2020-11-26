@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Con-tactos</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script><!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+  <!-- CABECERA DEL EJERCICIO -->
+  <header class="header align-middle justify-content-center">
+    <nav class="navbar navbar-dark navbar-expand-sm">
+      <a class="navbar-brand" href="#">
+        <img src="./images/contacts-icon.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        CON-TACTOS
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">      
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" id="btnnuevo" href="#">Nuevo</a>
+          </li>
+        </ul>
+      </div>
+      <form id="frmsearch">
+        <input type="search" placeholder="Search" aria-label="Search" size="10"
+        style="padding:2px;font-size:.8em;height:20px;margin-top:10px">
+        <a href="#"><i class='fas fa-search'></i></a>
+      </form>
+    </nav>
+  </header>
+  <!-- CUERPO DEL EJERCICIO, RESULTADOS, TARJETAS -->
+  <main>
+    <div class="container">
+      <div class="row justify-content-center" id="contact-list">
+        <!-- contenedor de tarjetas --> 
+      </div>
+    </div>
+  </main>
+
+  <!-- SIDEBAR CON LETRAS PARA FILTRAR -->
+  <aside>
+    <ul>
+      <!-- aquí es donde irán la letras de la agenda -->
+    </ul>
+  </aside>
+
+  <!-- VENTANA MODAL -->
+  <div class="modal modal-hidden">
+    <div class="modal-container">
+      <div class="modal-body">
+        <h4>Datos del contacto</h4>    
+        <form id="frmcontacto">
+          <p><span>Nombre: </span><input type="text" name="txtname"></p>
+          <p><span>Apellidos: </span><input type="text" name="txtsurname"></p>
+          <p><span>Teléfono: </span><input type="phone" name="txtphone"></p>
+          <p><span>E-mail: </span><input type="email" name="txtemail" required></p>
+          <p><span>Dirección: </span><input type="text" name="txtaddress"></p>
+          <p><span>Ciudad: </span><input type="text" name="txtcity"></p>
+          <p>
+            <span>Edad: </span><input type="number" name="txtage" value="30">
+            <span>Género: </span><select name="txtgender">
+              <option value="m">Hombre</option>
+              <option value="f">Mujer</option></select>
+          </p>
+          </form>
+        <button class="btn btn-danger" name="cancelar">Cancelar</button>
+        <button class="btn btn-primary" name="guardar">Guardar</button>
+
+      </div>
+    </div>
+  </div>
+    
+  <!-- tarjeta-->
+  <div class="col-12 col-sm-6 col-md-4 contact-card" id="tarjeta">
+    <!-- titulo de la tarjeta-->
+    <div class="row title-card">
+      <div class="col-12">
+        <h1><span class="data" name="name">Nombre</span>
+          <span class="data" name="surname">Apellido1 Apellido2</span>
+        </h1>
+      </div>
+    </div>
+    <!-- cuerpo de la tarjeta-->
+    <div class="row body-card">
+      <div class="col-3">
+        <img src="images/m.png" class="data d-flex avatar justify-content-center" name="gender">
+        <div><span class="data" name="age">24</span></div>
+      </div><!-- menu de opciones del contacto -->
+      <div class="col-9 menu-card d-flex align-items-end justify-content-end">
+        <a href="#">Editar</a> | <a href="#">Compartir</a> | <a href="#">Eliminar</a>
+      </div>
+      <div class="col-12 data-card">
+        <!-- datos del contacto -->
+        <div>Teléfono: <span class="data" name="phone">919919991</span></div>
+        <div>Email: <span class="data" name="email">loquesea@loquesea.com</span></div>
+        <div>Direccion: <span class="data" name="address">C/lo que sea, 9</span></div>
+        <div>Ciudad: <span class="data" name="city">Madrid</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- fin de tarjeta -->
+
+  <!-- ARCHIVOS JAVASCRIPT -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
